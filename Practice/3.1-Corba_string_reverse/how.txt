@@ -1,0 +1,7 @@
+idlj -fall file.idl
+
+ orbd -ORBInitialPort 1050
+
+ java ReverseServer -ORBInitialPort 1050 -ORBInitialHost localhost
+
+ java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost

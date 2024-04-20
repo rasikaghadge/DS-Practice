@@ -1,0 +1,9 @@
+public class CelsiusToFahrenheit {
+    public static void main(String[] args) {
+        double c = 30;
+
+        // Using the formula
+        double f = (c * 9/5) + 32;
+        System.out.println("After converting celsius to fahrenheit the value is " + f);
+    }
+}

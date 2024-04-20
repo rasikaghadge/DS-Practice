@@ -1,0 +1,4 @@
+rmic implfile
+rmiregistry
+java server
+java client 127.0.0.1

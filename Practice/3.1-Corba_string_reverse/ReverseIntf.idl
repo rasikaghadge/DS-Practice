@@ -1,0 +1,9 @@
+module ReverseApp
+{
+ interface ReverseIntf
+  {
+ string getReverseString(in string str1);
+ long getReverseNumber(in long num1);
+ oneway void shutdown();
+ };
+};
