@@ -1,0 +1,41 @@
+LPV Assignment No : 3 
+Problem Statement : - To develop any application with CORBA program JAVA IDL
+Step1 : - Install JAVA (JDK) version 1.8
+Step2 :- Check for the idlj in the C:/Program Files/Java/JDK/bin
+Step3 :- Add jdk’s bin folder path to environment variable (ex- C:/Program Files/Java/JDK/bin)
+Step4 :- Create a Interface for Java
+a)	For example Calc.idl
+Include the following code in the idl file
+module CalcApp
+{
+	interface Calc
+	{
+		exception DivisionByZero {};
+
+		float sum(in float a, in float b);
+		float div(in float a, in float b) raises (DivisionByZero);
+		float mul(in float a, in float b);
+		float sub(in float a, in float b);
+	};
+};
+Step5 :- Create two java files 
+
+Step6 :- Compile the Calc.idl file. 
+a)	Command :– idlj  –fall Calc.idl
+b)	This will create the CalcApp module
+c)	Running this command will create a module with the following files in it.
+ 
+
+Step7:- Compile all the java files 
+	Command :-    javac *.java CalcApp/*.java
+Step8:- Initialize the ORB with the following command and with initial port 1050
+	Command:- orbd -ORBInitialPort 1050
+ 
+Step9:- Execute the server code with the following command
+	Command :- java CalcServer -ORBInitialPort 1050 -ORBInitialHost localhost
+ 
+Step10:- Execute the client code with the following command
+	Command :- java CalcClient -ORBInitialPort 1050 -ORBInitialHost localhost
+ 
+
+Conclusion : We have implemented a distributed application using CORBA programming and JAVA IDL.
