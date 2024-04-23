@@ -1,4 +1,7 @@
-rmic implfile
-rmiregistry
-java server
-java client 127.0.0.1
+javac .\AddServerImpl.java - 1
+rmic AddServerImpl.java - 1
+rmiregistry -1 
+javac AddServer.java - 2
+java AddServer -2
+javac AddClient.java - 3
+java AddClient 127.0.0.1 5 8 name- 3

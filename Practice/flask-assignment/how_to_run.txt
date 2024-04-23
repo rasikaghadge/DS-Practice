@@ -1,0 +1,17 @@
+1) create virtual environemnt(optional)
+steps
+    - python -m venv venv 
+    - source .venv/bin/activate (linux/mac) (for windows something Scripts/bin/activate)
+
+2) Install requirements
+steps 
+    - pip install -r requirements.txt 
+
+3) Run web services
+    steps 
+        - chmod +x start_all.sh 
+        - ./start_all.sh
+
+4) Run the consumer
+    steps 
+        - python cmdline.py

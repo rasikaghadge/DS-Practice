@@ -1,0 +1,18 @@
+Download openmpi-4.1.4.tar.bz2 from http://www.open-mpi.org in a folder say LP5. 
+Open terminal
+type sudo su and then password if asked
+sudo apt-get update 
+sudo apt install gcc
+sudo apt install g++ 
+cd into directory where tar is donwloaded
+tar -jxf openmpi-4.1.4.tar.bz2 
+./configure --prefix=/home/ubuntu/openmpi 
+make all 
+make install 
+echo "export PATH=\$PATH:/home/ubuntu/openmpi/bin" >> $HOME/.bashrc 
+echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/home/ubuntu/openmpilib">>$HOME/.bashrc 
+sudo apt install mpich
+paste hwllo world c code in hello.cd
+chmod +x hello.c (to give permission)
+mpicc hello.c
+mpirun -np N ./a.out (replace N with number of cores you want eg. 2)
