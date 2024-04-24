@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-import com.unique.Calculator_Service;
+import com.unique.Calculator_service;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
